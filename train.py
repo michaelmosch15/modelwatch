@@ -9,15 +9,14 @@ from tqdm import tqdm
 
 # Add app directory to path to import local modules
 current_dir = os.path.dirname(os.path.abspath(__file__))
-app_dir = os.path.join(current_dir, "..", "app")
-sys.path.insert(0, app_dir)
+sys.path.insert(0, current_dir)
 
-from src.transformer_filter_layer import GPT2WithPIIFiltering
-from src.pii_layer import detect_pii
+from src.model import GPT2WithPIIFiltering
+from src.labeling import detect_pii
 
 # Configuration
-EMAIL_DIR = os.path.join(current_dir, "..", "email_generation", "output_emails")
-MODEL_SAVE_PATH = os.path.join(current_dir, "..", "models", "pii_filter_model.pt")
+EMAIL_DIR = os.path.join(current_dir, "data", "synthetic_emails")
+MODEL_SAVE_PATH = os.path.join(current_dir, "models", "pii_filter_model.pt")
 BATCH_SIZE = 2
 EPOCHS = 1
 LEARNING_RATE = 1e-4

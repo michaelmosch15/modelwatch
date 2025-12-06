@@ -8,7 +8,7 @@ from transformers import AutoTokenizer
 current_dir = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(current_dir)
 
-from app.src.transformer_filter_layer import GPT2WithPIIFiltering
+from src.model import GPT2WithPIIFiltering
 
 def load_model(model_path, device):
     """Loads the trained PII filtering model."""

@@ -5,11 +5,11 @@ from openai import OpenAI
 from tqdm import tqdm
 from dotenv import load_dotenv
 
-dotenv_path = os.path.join(os.path.dirname(__file__), "..", ".env")
+dotenv_path = os.path.join(os.path.dirname(__file__), ".env")
 load_dotenv(dotenv_path)
 
-INPUT_CSV = os.path.abspath(os.path.join(os.path.dirname(__file__), "source_data", "Employee DATA(in).csv"))
-OUTPUT_DIR = os.path.join(os.path.dirname(__file__), "output_emails")
+INPUT_CSV = os.path.abspath(os.path.join(os.path.dirname(__file__), "data", "source", "Employee DATA(in).csv"))
+OUTPUT_DIR = os.path.join(os.path.dirname(__file__), "data", "synthetic_emails")
 NUM_EMAILS = 500
 COMPANY_NAME = "Merck"
 

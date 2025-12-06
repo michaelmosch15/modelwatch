@@ -36,16 +36,16 @@ Unlike traditional regex or rule-based systems, ModelWatch employs a trained 6-l
 
 ### 1. Redact a New Email (Inference)
 
-To redact PII from a text file using the trained model, use the `redact_email.py` script.
+To redact PII from a text file using the trained model, use the `redact.py` script.
 
 **Command:**
 ```bash
-python redact_email.py <path_to_email_file>
+python redact.py <path_to_email_file>
 ```
 
 **Example:**
 ```bash
-python redact_email.py email_generation/output_emails/email_chain_1.txt --output redacted_email.txt
+python redact.py data/synthetic_emails/email_chain_1.txt --output redacted_email.txt
 ```
 
 **Options:**
@@ -58,11 +58,11 @@ If you wish to retrain the PII filter on new data:
 
 1.  **Generate Data**: Use the OpenAI-based generator (requires API key).
     ```bash
-    python email_generation/generate_emails.py
+    python generate_data.py
     ```
 2.  **Train**: Run the training loop.
     ```bash
-    python scripts/train_pii_filter.py
+    python train.py
     ```
     This will save the model weights to `models/pii_filter_model.pt`.
 
@@ -70,18 +70,16 @@ If you wish to retrain the PII filter on new data:
 
 ```
 modelwatch/
-├── redact_email.py             # Main entry point for redaction
-├── app/
-│   ├── src/
-│   │   └── transformer_filter_layer.py  # Custom Model Architecture
-│   └── ...
-├── email_generation/
-│   ├── generate_emails.py      # Synthetic data generator
-│   └── output_emails/          # Generated training data
+├── src/
+│   ├── model.py                # Custom Transformer Architecture (Soft Masking)
+│   └── labeling.py             # Regex/NER logic for training labels
+├── data/
+│   ├── source/                 # Input CSVs
+│   └── synthetic_emails/       # Generated training data
 ├── models/
-│   └── pii_filter_model.pt     # Trained model weights (Git LFS)
-├── scripts/
-│   ├── train_pii_filter.py     # Training script
-│   └── run_pii_filter.py       # Batch processing script
+│   └── pii_filter_model.pt     # Trained model weights
+├── generate_data.py            # Script to generate synthetic emails
+├── train.py                    # Script to train the model
+├── redact.py                   # Main inference script
 └── requirements.txt
 ```
