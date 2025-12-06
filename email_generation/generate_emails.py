@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 dotenv_path = os.path.join(os.path.dirname(__file__), "..", ".env")
 load_dotenv(dotenv_path)
 
-INPUT_CSV = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "app", "data", "Employee DATA(in).csv"))
+INPUT_CSV = os.path.abspath(os.path.join(os.path.dirname(__file__), "source_data", "Employee DATA(in).csv"))
 OUTPUT_DIR = os.path.join(os.path.dirname(__file__), "output_emails")
 NUM_EMAILS = 500
 COMPANY_NAME = "Merck"

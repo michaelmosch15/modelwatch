@@ -85,11 +85,3 @@ modelwatch/
 │   └── run_pii_filter.py       # Batch processing script
 └── requirements.txt
 ```
-
-## Legacy Tools
-
-The `app/main.py` script provides access to earlier rule-based and hybrid (Presidio + Regex) detection methods.
-
-```bash
-python app/main.py --help
-```
