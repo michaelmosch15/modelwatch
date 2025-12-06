@@ -25,3 +25,12 @@ app/data/*.cache
 
 # pytest
 .pytest_cache/
+
+# Generated Data
+email_generation/output_emails/
+email_generation/output_emails_sanitized/
+
+# Models
+models/*.pt
+
+.env

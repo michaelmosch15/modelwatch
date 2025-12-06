@@ -76,6 +76,54 @@ def _build_detectors():
 
     detectors.append(detect_phone)
 
+    # Date of Birth (DD-MM-YY based on example 17-08-21)
+    DOB_RE = re.compile(r"\b\d{2}-\d{2}-\d{2}\b")
+
+    def detect_dob(text: str) -> List[Dict[str, Any]]:
+        items: List[Dict[str, Any]] = []
+        for m in DOB_RE.finditer(text or ""):
+            items.append({
+                "label": "DOB",
+                "text": m.group(0),
+                "start": int(m.start()),
+                "end": int(m.end()),
+            })
+        return items
+
+    detectors.append(detect_dob)
+
+    # Unique Identifier (XXX-XX-XXXX based on example 089-45-9486)
+    ID_RE = re.compile(r"\b\d{3}-\d{2}-\d{4}\b")
+
+    def detect_id(text: str) -> List[Dict[str, Any]]:
+        items: List[Dict[str, Any]] = []
+        for m in ID_RE.finditer(text or ""):
+            items.append({
+                "label": "ID",
+                "text": m.group(0),
+                "start": int(m.start()),
+                "end": int(m.end()),
+            })
+        return items
+
+    detectors.append(detect_id)
+
+    # Sex (Male/Female)
+    SEX_RE = re.compile(r"\b(Male|Female)\b", re.IGNORECASE)
+
+    def detect_sex(text: str) -> List[Dict[str, Any]]:
+        items: List[Dict[str, Any]] = []
+        for m in SEX_RE.finditer(text or ""):
+            items.append({
+                "label": "SEX",
+                "text": m.group(0),
+                "start": int(m.start()),
+                "end": int(m.end()),
+            })
+        return items
+
+    detectors.append(detect_sex)
+
     # Signature name detector (e.g., "Thanks,\nAlice" or "Best,\nJohn Doe")
     SALUTATIONS = {"thanks", "regards", "cheers", "best", "sincerely", "kind regards", "warm regards", "best regards"}
     SIG_NAME_RE = re.compile(r"(?im)^[ \t]*([A-Z][a-z]+(?:[ \t][A-Z][a-z]+){0,2})[ \t]*$")

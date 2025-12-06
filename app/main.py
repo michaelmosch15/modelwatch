@@ -20,6 +20,7 @@ from transformers import AutoTokenizer, AutoModelForCausalLM
 from transformers.generation.logits_process import LogitsProcessorList, NoBadWordsLogitsProcessor
 from src.pii_layer import detect_pii as hybrid_detect_pii, anonymize
 from src.token_layer import TokenReplacementEmbeddingLayer
+from src.transformer_filter_layer import GPT2WithPIIFiltering
 
 
 def build_rewrite_prompt(subject: str, body: str) -> str:
@@ -57,7 +58,9 @@ def cmd_rewrite(args: argparse.Namespace) -> None:
     tokenizer = AutoTokenizer.from_pretrained(args.model_id)
     if tokenizer.pad_token is None:
         tokenizer.pad_token = tokenizer.eos_token
-    model = AutoModelForCausalLM.from_pretrained(args.model_id)
+    
+    # Use custom GPT-2 with PII filtering layers
+    model = GPT2WithPIIFiltering.from_pretrained(args.model_id)
     try:
         model.config._attn_implementation = "eager"
     except Exception:

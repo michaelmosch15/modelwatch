@@ -4,5 +4,4 @@ pandas>=2.2
 numpy>=1.26
 spacy>=3.7
 presidio-analyzer>=2.2
-presidio-recognizers>=2.2
 tqdm>=4.66

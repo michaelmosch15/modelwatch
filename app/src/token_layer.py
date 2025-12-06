@@ -21,7 +21,7 @@ class TokenReplacementEmbeddingLayer:
         tokenizer,
         model,
         detect_fn: Callable[[str], List[Dict]],
-        labels: Tuple[str, ...] = ("PERSON", "EMAIL", "PHONE"),
+        labels: Tuple[str, ...] = ("PERSON", "EMAIL", "PHONE", "DOB", "ID", "SEX", "JOB_TITLE"),
     ) -> None:
         self.tokenizer = tokenizer
         self.model = model
