@@ -1,0 +1,45 @@
+Subject: Access Issue with the Compound Database
+
+---
+
+From: Marc Duran <vincentellison@example.com>  
+To: Jillian Burch <sheliawolfe@example.org>  
+Date: October 12, 2023, 9:45 AM  
+Subject: Access Issue with the Compound Database
+
+Hi Jillian,
+
+I hope this message finds you well. I am reaching out to request your assistance with an access issue I’m experiencing with the Compound Database. Since yesterday, I've been unable to log in and retrieve data necessary for the ongoing curation project related to our oncology compounds.
+
+The error message indicates that my credentials are not recognized, which is odd since they were working fine last week. As you know, we have a project milestone review scheduled for October 20th, and I need to ensure everything is up to date before our team meeting next Wednesday.
+
+Could you please look into this at your earliest convenience? If you need more details or access to my system, feel free to call me directly at my office: (555) 012-3456.
+
+Thank you for your help!
+
+Best regards,  
+Marc Duran  
+Curator | Merck  
+vincentellison@example.com
+
+---
+
+From: Jillian Burch <sheliawolfe@example.org>  
+To: Marc Duran <vincentellison@example.com>  
+Date: October 12, 2023, 11:20 AM  
+Subject: Re: Access Issue with the Compound Database
+
+Hi Marc,
+
+Thanks for bringing this to my attention. I apologize for the inconvenience you're experiencing with the Compound Database. It sounds like it might be a server-side authentication issue, possibly linked to the recent system updates we implemented over the weekend.
+
+I’ll coordinate with our database administration team to expedite the resolution. In the meantime, could you try resetting your password and let me know if that resolves the issue? I’ll also check the logs for any anomalies related to your account.
+
+If it requires more troubleshooting, I might need to access your machine remotely. Please confirm your availability later today, or let me know if tomorrow morning works better for you.
+
+I'll ensure this is sorted out before your team meeting next week. Feel free to reach out if there's anything else you need.
+
+Best regards,  
+Jillian Burch  
+IT Technical Support Officer | Merck  
+sheliawolfe@example.org

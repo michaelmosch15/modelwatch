@@ -27,10 +27,10 @@ app/data/*.cache
 .pytest_cache/
 
 # Generated Data
-email_generation/output_emails/
-email_generation/output_emails_sanitized/
+# email_generation/output_emails/
+# email_generation/output_emails_sanitized/
 
 # Models
-models/*.pt
+# models/*.pt
 
 .env

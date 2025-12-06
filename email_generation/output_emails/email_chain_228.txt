@@ -1,0 +1,73 @@
+**Email 1:**
+
+---
+
+**From:** Tony Wheeler <sheena75@example.com>  
+**To:** Rachael Mcgrath <dunlapanita@example.org>  
+**Subject:** Collaboration on Sustainable Practices for Software Development  
+
+Hi Rachael,
+
+I hope this email finds you well. I'm reaching out to discuss an exciting initiative we've been working on in the Sustainability Department. As part of Merck's commitment to reducing our carbon footprint, we're looking to integrate more eco-friendly practices across all departments, including Software Development.
+
+I understand you're currently leading the team on the new "PharmaSys" project. I believe there's a significant opportunity for us to collaborate on implementing sustainable software engineering practices, such as optimizing algorithms to reduce energy consumption or utilizing cloud-based solutions more efficiently.
+
+Would you be available for a brief meeting next week to explore potential strategies? I’m available on Wednesday or Thursday after 2 PM. Let me know what works best for you.
+
+Looking forward to your thoughts.
+
+Best regards,
+
+Tony Wheeler  
+Recycling Officer  
+Merck & Co.  
+sheena75@example.com  
+(555) 012-3456  
+
+---
+
+**Email 2:**
+
+---
+
+**From:** Rachael Mcgrath <dunlapanita@example.org>  
+**To:** Tony Wheeler <sheena75@example.com>  
+**Subject:** Re: Collaboration on Sustainable Practices for Software Development  
+
+Hi Tony,
+
+Thanks for reaching out! I’m excited to hear about Merck’s sustainability initiatives and keen to see how we can incorporate these practices into our software development processes.
+
+I agree that the "PharmaSys" project could greatly benefit from a sustainability review. My team and I have actually been discussing ways to optimize our code for better energy efficiency, so this is perfect timing.
+
+I’m available on Wednesday at 3 PM, which should give us plenty of time to discuss ideas and develop a plan. We can meet in Meeting Room B on the 5th floor, if that works for you.
+
+Looking forward to collaborating on this!
+
+Best,  
+Rachael Mcgrath  
+Software Engineer  
+Merck & Co.  
+dunlapanita@example.org  
+(555) 234-5678  
+
+---
+
+**Email 3:**
+
+---
+
+**From:** Tony Wheeler <sheena75@example.com>  
+**To:** Rachael Mcgrath <dunlapanita@example.org>  
+**Subject:** Re: Collaboration on Sustainable Practices for Software Development  
+
+Hi Rachael,
+
+Wednesday at 3 PM sounds perfect, and Meeting Room B works for me. I’ll bring along some initial ideas and data on energy consumption in software processes that we’ve gathered. I’m excited to see how we can integrate these practices into "PharmaSys" and set a precedent for future projects.
+
+Thanks again for your enthusiasm and support. See you on Wednesday!
+
+Best,  
+Tony  
+
+---

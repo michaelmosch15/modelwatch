@@ -1,0 +1,47 @@
+Subject: Assistance Needed with Network Access for Animation Software
+
+---
+
+**From:** Thomas Moody <istevens@example.net>  
+**Date:** Wednesday, October 11, 2023, 9:45 AM  
+**To:** Cesar Berger <hunter22@example.org>  
+**Subject:** Assistance Needed with Network Access for Animation Software  
+
+Hi Cesar,
+
+I hope this message finds you well. I'm reaching out to you regarding some connectivity issues we're experiencing with the animation software, specifically the new updates for the Pharma Visualizer tool that our team is implementing for the upcoming product demo.
+
+Since the latest update, I've noticed intermittent access problems when trying to sync our animation files with the central server. It seems like there might be a firewall or network permissions issue that's preventing a stable connection.
+
+Could you please look into this? We have a deadline approaching on October 20th for the demo, and I'd like to ensure everything runs smoothly. If needed, I can provide logs or any additional information that might help troubleshoot the issue.
+
+Thank you in advance for your support!
+
+Best,  
+Thomas Moody  
+Animator, Creative Team  
+Merck & Co.  
+Phone: (555) 123-4567  
+
+---
+
+**From:** Cesar Berger <hunter22@example.org>  
+**Date:** Wednesday, October 11, 2023, 11:15 AM  
+**To:** Thomas Moody <istevens@example.net>  
+**Subject:** Re: Assistance Needed with Network Access for Animation Software  
+
+Hi Thomas,
+
+Thanks for bringing this to my attention. It sounds like it could be a configuration issue on the server side. I’ll review the firewall settings and network permissions for the Pharma Visualizer tool today.
+
+Could you please send over any error logs you have? They might provide more insights into the specific problem. Also, if you’re available, we could set up a brief call tomorrow morning around 10:00 AM to go over the issues in real-time. Let me know if that works for you.
+
+I’ll do my best to have everything resolved by the end of the week, so your team can proceed with the demo preparations without any hiccups.
+
+Best regards,  
+Cesar Berger  
+Network Engineer, IT Department  
+Merck & Co.  
+Phone: (555) 987-6543  
+
+P.S. I’ll be on leave starting October 23rd, so let’s aim to get this sorted out before then.
