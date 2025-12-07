@@ -1,6 +1,7 @@
 import os
 import sys
 import glob
+import time
 import torch
 import torch.nn as nn
 from torch.utils.data import Dataset, DataLoader
@@ -18,7 +19,7 @@ from src.labeling import detect_pii
 EMAIL_DIR = os.path.join(current_dir, "data", "synthetic_emails")
 MODEL_SAVE_PATH = os.path.join(current_dir, "models", "pii_filter_model.pt")
 BATCH_SIZE = 2
-EPOCHS = 3
+EPOCHS = 2
 LEARNING_RATE = 1e-4
 MAX_LEN = 512
 
@@ -111,11 +112,16 @@ def train():
     criterion = nn.BCEWithLogitsLoss() # Binary Cross Entropy for PII detection
 
     model.train()
+    start_time = time.time()
     for epoch in range(EPOCHS):
         total_loss = 0
         progress_bar = tqdm(dataloader, desc=f"Epoch {epoch+1}/{EPOCHS}")
         
         for batch in progress_bar:
+            if time.time() - start_time > 60:
+                print("\nTraining time limit of 1 minute reached. Stopping.")
+                break
+
             input_ids = batch["input_ids"].to(device)
             attention_mask = batch["attention_mask"].to(device)
             labels = batch["labels"].to(device).unsqueeze(-1) # Shape: (batch, seq, 1)
@@ -147,6 +153,9 @@ def train():
             progress_bar.set_postfix({"loss": loss.item()})
 
         print(f"Epoch {epoch+1} Average Loss: {total_loss / len(dataloader)}")
+
+        if time.time() - start_time > 180:
+            break
 
     # 4. Save
     print(f"Saving model to {MODEL_SAVE_PATH}")

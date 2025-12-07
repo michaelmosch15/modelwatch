@@ -63,8 +63,10 @@ def main():
     parser = argparse.ArgumentParser(description="Redact PII from an email text file using the trained ModelWatch model.")
     # Default to email.txt in the same folder as redact.py
     default_input = os.path.join(current_dir, "email.txt")
+    default_output = os.path.join(current_dir, "outputs", "redacted.txt")
+    
     parser.add_argument("--input_file", default=default_input, help=f"Path to input file (default: {default_input})")
-    parser.add_argument("--output", "-o", help="Path to save the redacted output. If not provided, prints to console.")
+    parser.add_argument("--output", "-o", default=default_output, help=f"Path to save the redacted output (default: {default_output})")
     parser.add_argument("--model_path", default="models/pii_filter_model.pt", help="Path to the trained model file.")
     parser.add_argument("--threshold", type=float, default=0.5, help="Probability threshold for PII detection (default: 0.5).")
     
@@ -95,6 +97,7 @@ def main():
     
     # Output
     if args.output:
+        os.makedirs(os.path.dirname(os.path.abspath(args.output)), exist_ok=True)
         with open(args.output, "w", encoding="utf-8") as f:
             f.write(redacted_text)
         print(f"Redacted text saved to {args.output}")
