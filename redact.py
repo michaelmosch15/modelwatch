@@ -10,7 +10,6 @@ sys.path.append(current_dir)
 from src.model import GPT2WithPIIFiltering
 
 def load_model(model_path, device):
-    """Loads the trained PII filtering model."""
     print("Loading model configuration...")
     model = GPT2WithPIIFiltering.from_pretrained("gpt2")
     
@@ -27,9 +26,7 @@ def load_model(model_path, device):
     return model
 
 def redact_text(text, model, tokenizer, device, threshold=0.5):
-    """
-    Takes raw text and returns the redacted version using the model.
-    """
+
     inputs = tokenizer(text, return_tensors="pt", truncation=True, max_length=1024).to(device)
     
     with torch.no_grad():
@@ -89,9 +86,7 @@ def main():
             f.write(redacted_text)
         print(f"Redacted text saved to {args.output}")
     else:
-        print("\n--- Redacted Output ---\n")
         print(redacted_text)
-        print("\n-----------------------\n")
 
 if __name__ == "__main__":
     main()

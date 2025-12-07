@@ -4,16 +4,7 @@ import torch.nn as nn
 from transformers import GPT2LMHeadModel, GPT2Config
 
 class GPT2WithPIIFiltering(GPT2LMHeadModel):
-    """
-    A GPT-2 model extended with a 'Soft Masking' PII filter.
-    
-    Architecture:
-    1. Input Embeddings
-    2. PII Filter Transformer (6 Layers)
-    3. PII Probability Score
-    4. Soft Masking (Mixes Original vs. Mask Embedding)
-    5. Standard GPT-2
-    """
+
     def __init__(self, config: GPT2Config):
         super().__init__(config)
         

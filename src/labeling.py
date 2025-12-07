@@ -1,11 +1,3 @@
-"""
-PII Transform Layer: detect personal identifiers (names, emails, phones) and anonymize text.
-
-Exports:
-- detect_pii(text) -> list of dicts {label, text, start, end}
-- anonymize(text) -> (text_with_tags, mapping, items)
-"""
-
 from __future__ import annotations
 
 from typing import List, Dict, Any, Tuple
