@@ -8,14 +8,12 @@ from torch.utils.data import Dataset, DataLoader
 from transformers import AutoTokenizer
 from tqdm import tqdm
 
-# Add app directory to path to import local modules
 current_dir = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, current_dir)
 
 from src.model import GPT2WithPIIFiltering
 from src.labeling import detect_pii
 
-# Configuration
 EMAIL_DIR = os.path.join(current_dir, "data", "synthetic_emails")
 MODEL_SAVE_PATH = os.path.join(current_dir, "models", "pii_filter_model.pt")
 BATCH_SIZE = 2
@@ -36,7 +34,6 @@ class PIIDataset(Dataset):
         with open(self.file_paths[idx], "r", encoding="utf-8") as f:
             text = f.read()
 
-        # 1. Tokenize
         encoding = self.tokenizer(
             text,
             truncation=True,
@@ -50,20 +47,15 @@ class PIIDataset(Dataset):
         attention_mask = encoding["attention_mask"].squeeze()
         offset_mapping = encoding["offset_mapping"].squeeze()
 
-        # 2. Generate Labels (Pseudo-labels using our regex/NER detector)
-        # We want a binary mask: 1 for PII, 0 for non-PII
         labels = torch.zeros_like(input_ids, dtype=torch.float)
         
-        # Detect PII spans
         pii_items = detect_pii(text)
         
         for item in pii_items:
             start, end = item["start"], item["end"]
-            # Find tokens that overlap with this span
             for i, (tok_start, tok_end) in enumerate(offset_mapping):
-                if tok_start == 0 and tok_end == 0: continue # Skip padding
+                if tok_start == 0 and tok_end == 0: continue
                 
-                # Check overlap
                 if tok_start < end and tok_end > start:
                     labels[i] = 1.0
 
@@ -74,7 +66,6 @@ class PIIDataset(Dataset):
         }
 
 def train():
-    # 1. Setup
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     print(f"Using device: {device}")
     
@@ -83,33 +74,28 @@ def train():
     tokenizer = AutoTokenizer.from_pretrained("gpt2")
     tokenizer.pad_token = tokenizer.eos_token
 
-    # Load Model
     model = GPT2WithPIIFiltering.from_pretrained("gpt2")
     model.to(device)
     
-    # Freeze GPT-2 base layers (we only train the filter)
     for param in model.transformer.parameters():
         param.requires_grad = False
     
-    # Ensure filter layers are trainable
     for param in model.pii_filter_layer.parameters():
         param.requires_grad = True
     for param in model.pii_classifier.parameters():
         param.requires_grad = True
     model.mask_embedding.requires_grad = True
 
-    # 2. Data
     files = glob.glob(os.path.join(EMAIL_DIR, "*.txt"))
     if not files:
-        print("No email files found! Run generate_emails.py first.")
+        print(f"No training data found in {EMAIL_DIR}")
         return
 
     dataset = PIIDataset(files, tokenizer, max_len=MAX_LEN)
     dataloader = DataLoader(dataset, batch_size=BATCH_SIZE, shuffle=True)
 
-    # 3. Training Loop
     optimizer = torch.optim.AdamW(filter(lambda p: p.requires_grad, model.parameters()), lr=LEARNING_RATE)
-    criterion = nn.BCEWithLogitsLoss() # Binary Cross Entropy for PII detection
+    criterion = nn.BCEWithLogitsLoss()
 
     model.train()
     start_time = time.time()
@@ -124,22 +110,14 @@ def train():
 
             input_ids = batch["input_ids"].to(device)
             attention_mask = batch["attention_mask"].to(device)
-            labels = batch["labels"].to(device).unsqueeze(-1) # Shape: (batch, seq, 1)
+            labels = batch["labels"].to(device).unsqueeze(-1)
 
             optimizer.zero_grad()
-
-            # Forward pass
-            # We need to access the internal pii_logits. 
-            # Since the model's forward() returns standard CausalLMOutput, 
-            # we might need to modify the model or access the classifier directly.
-            # However, for training the FILTER, we specifically want to optimize the classification accuracy.
             
-            # Let's manually run the filter part for training to get the logits
             inputs_embeds = model.transformer.wte(input_ids)
             filter_features = model.pii_filter_layer(inputs_embeds)
             pii_logits = model.pii_classifier(filter_features)
             
-            # Calculate loss only on non-padded tokens
             active_loss = attention_mask.view(-1) == 1
             active_logits = pii_logits.view(-1)[active_loss]
             active_labels = labels.view(-1)[active_loss]
@@ -154,13 +132,11 @@ def train():
 
         print(f"Epoch {epoch+1} Average Loss: {total_loss / len(dataloader)}")
 
-        if time.time() - start_time > 180:
+        if time.time() - start_time > 60:
             break
 
-    # 4. Save
     print(f"Saving model to {MODEL_SAVE_PATH}")
     torch.save(model.state_dict(), MODEL_SAVE_PATH)
-    print("Training complete.")
 
 if __name__ == "__main__":
     train()

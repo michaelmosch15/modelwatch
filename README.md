@@ -1,15 +1,15 @@
 # ModelWatch: Deep Learning PII Redaction
 
-ModelWatch is a sophisticated privacy-preserving tool that uses a custom **Soft-Masking Transformer Architecture** to detect and redact Personally Identifiable Information (PII) from emails and text documents.
+ModelWatch is a privacy-preserving tool that utilizes a Soft-Masking Transformer Architecture to detect and redact Personally Identifiable Information (PII) from text documents.
 
-Unlike traditional regex or rule-based systems, ModelWatch employs a trained 6-layer Transformer Encoder inserted *before* a GPT-2 backbone to semantically understand context and identify sensitive entities like Names, Emails, Phone Numbers, and IDs.
+It employs a trained 6-layer Transformer Encoder inserted before a GPT-2 backbone to identify sensitive entities such as Names, Emails, Phone Numbers, and IDs.
 
 ## Key Features
 
--   **Custom Architecture**: Extends `GPT2LMHeadModel` with a dedicated PII Filter Stack.
--   **Soft Masking**: Uses a learnable `[REDACTED]` embedding vector that is mathematically blended with original token embeddings based on a predicted PII probability score.
--   **Context-Aware**: Distinguishes between sensitive numbers (e.g., SSN, Phone) and non-sensitive numbers (e.g., indices, quantities) based on sentence context.
--   **End-to-End Training**: The filter layer is trained on synthetic email data to maximize PII detection accuracy.
+-   **Soft-Masking Architecture**: Extends `GPT2LMHeadModel` with a dedicated PII Filter Stack.
+-   **Learnable Masking**: Utilizes a learnable `[REDACTED]` embedding vector blended with original token embeddings based on predicted PII probability.
+-   **Context-Aware Detection**: Distinguishes between sensitive and non-sensitive numerical data based on sentence context.
+-   **End-to-End Training**: The filter layer is trained on synthetic email data to optimize PII detection.
 
 ## Installation
 
@@ -30,56 +30,49 @@ Unlike traditional regex or rule-based systems, ModelWatch employs a trained 6-l
     pip install -r requirements.txt
     ```
 
-    *Note: This project requires PyTorch and Hugging Face Transformers.*
-
 ## Usage
 
-### 1. Redact a New Email (Inference)
+### Inference
 
-To redact PII from a text file using the trained model, use the `redact.py` script.
+To redact PII from a text file using the trained model:
 
-**Command:**
 ```bash
-python redact.py <path_to_email_file>
+python redact.py --input_file data/synthetic_emails/email_chain_1.txt --output outputs/redacted_email.txt
 ```
 
-**Example:**
-```bash
-python redact.py data/synthetic_emails/email_chain_1.txt --output redacted_email.txt
-```
+**Arguments:**
+-   `--input_file`: Path to the input text file.
+-   `--output`, `-o`: Path to save the redacted output.
+-   `--threshold`: Probability threshold for redaction (default: 0.5).
 
-**Options:**
--   `--output`, `-o`: Save the redacted text to a file. If omitted, prints to console.
--   `--threshold`: Probability threshold for redaction (default: 0.5). Lower values make the model more aggressive.
+### Training
 
-### 2. Training the Model
+To retrain the PII filter on new data:
 
-If you wish to retrain the PII filter on new data:
-
-1.  **Generate Data**: Use the OpenAI-based generator (requires API key).
+1.  **Generate Data**:
     ```bash
     python generate_data.py
     ```
-2.  **Train**: Run the training loop.
+2.  **Train**:
     ```bash
     python train.py
     ```
-    This will save the model weights to `models/pii_filter_model.pt`.
+    This saves the model weights to `models/pii_filter_model.pt`.
 
 ## Project Structure
 
 ```
 modelwatch/
 ├── src/
-│   ├── model.py                # Custom Transformer Architecture (Soft Masking)
-│   └── labeling.py             # Regex/NER logic for training labels
+│   ├── model.py                # Transformer Architecture definition
+│   └── labeling.py             # NER and Regex logic for labeling
 ├── data/
-│   ├── source/                 # Input CSVs
-│   └── synthetic_emails/       # Generated training data
+│   ├── source/                 # Input data
+│   └── synthetic_emails/       # Training data
 ├── models/
-│   └── pii_filter_model.pt     # Trained model weights
-├── generate_data.py            # Script to generate synthetic emails
-├── train.py                    # Script to train the model
-├── redact.py                   # Main inference script
+│   └── pii_filter_model.pt     # Model weights
+├── generate_data.py            # Data generation script
+├── train.py                    # Training script
+├── redact.py                   # Inference script
 └── requirements.txt
 ```
