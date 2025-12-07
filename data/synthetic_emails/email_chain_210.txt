@@ -1,0 +1,39 @@
+Subject: Re: IT Support for New Inventory System
+
+---
+
+**From:** Mia Short <tylernatalie@example.net>  
+**To:** Sherri Watts <keysheila@example.com>  
+**Date:** October 10, 2023, 10:15 AM  
+
+Hi Sherri,
+
+Thanks for getting back to me so quickly. I'll make sure to keep you updated on any feedback from our end once the new system is live. I'm optimistic that with your team’s support, the transition will be seamless.
+
+By the way, I wanted to let you know that I’ll be out of the office from October 16-20 for a family event. If there’s anything critical that needs addressing during that time, you can reach me on my cell at (555) 678-1234.
+
+Looking forward to seeing the improvements your team has made in action!
+
+Best,  
+Mia
+
+---
+
+**From:** Sherri Watts <keysheila@example.com>  
+**To:** Mia Short <tylernatalie@example.net>  
+**Date:** October 9, 2023, 3:45 PM  
+
+Hi Mia,
+
+Thanks for flagging the concerns about the inventory system integration. We understand how crucial it is for the Bookseller department to have a smooth transition, especially with the upcoming launch of the new pharmaceutical product line.
+
+I'm coordinating with our IT support team to ensure that the network can handle the increased data load and that the software updates are seamlessly integrated. We'll have a dedicated support channel set up by the end of the week, and I'll send you the contact details once it's live.
+
+Please feel free to reach out if there are any specific issues or requirements your team has. We want to ensure that everything aligns with your operational needs.
+
+Best regards,  
+Sherri Watts  
+Network Engineer  
+Merck & Co.  
+
+---

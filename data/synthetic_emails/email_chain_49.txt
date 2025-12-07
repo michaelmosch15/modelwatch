@@ -1,0 +1,42 @@
+Subject: Re: Access to Safety Data Sheets (SDS) Database
+
+---
+
+**From:** Dennis Richardson <adamzhang@example.net>  
+**Sent:** Tuesday, November 7, 2023, 10:15 AM  
+**To:** Kristy Kerr <xstark@example.org>  
+**Subject:** Re: Access to Safety Data Sheets (SDS) Database  
+
+Hi Kristy,
+
+Thanks for getting back to me. I’ve checked your access settings and everything seems to be in order from our end. It might be a browser compatibility issue. Could you try accessing the database using Chrome or Firefox? They tend to work more seamlessly with our system.
+
+If that doesn’t resolve the issue, I can schedule a quick call tomorrow at your convenience to troubleshoot further. Just let me know what time works for you.
+
+By the way, I heard you’re heading to the Zurich office next month for the occupational health workshop. Hope you have a great trip! Let me know if there's anything you need IT-wise for your travel.
+
+Best,  
+Dennis Richardson  
+IT Consultant  
+Merck  
+Phone: (555) 012-3456  
+
+---
+
+**From:** Kristy Kerr <xstark@example.org>  
+**Sent:** Monday, November 6, 2023, 3:30 PM  
+**To:** Dennis Richardson <adamzhang@example.net>  
+**Subject:** Access to Safety Data Sheets (SDS) Database  
+
+Hi Dennis,
+
+I hope this email finds you well. I’m currently experiencing difficulty accessing the Safety Data Sheets database. My login credentials seem to be rejected, even though I’m confident I’m entering them correctly.
+
+Could you please check if there are any issues on the IT side? It’s crucial for my upcoming review of the chemical exposure data linked to our new oncology project. Your assistance in resolving this swiftly would be greatly appreciated.
+
+Thank you for your help!
+
+Best regards,  
+Kristy Kerr  
+Occupational Hygienist  
+Merck

@@ -1,0 +1,44 @@
+Subject: Coordination on Facility Security Measures
+
+---
+
+From: Larry Avery <jdavid@example.com>  
+To: Norman Krause <tcochran@example.org>  
+Date: October 10, 2023  
+
+Hi Norman,
+
+I hope this email finds you well. I wanted to discuss the recent security review conducted at our Whitehouse Station facility. As you're aware, with the upcoming launch of our new product line, ensuring the structural integrity and security of our facilities is crucial.
+
+We've identified some areas where we might enhance the resilience of our perimeter barriers. Given your expertise in structural engineering, I would appreciate your input on the feasibility of reinforcing certain sections of the facility, particularly the high-traffic zones.
+
+Could we schedule a meeting this Thursday to review the current plans and discuss potential improvements? Please let me know your availability. If needed, I can be reached at my direct line, 555-0199.
+
+Looking forward to your insights.
+
+Best regards,
+
+Larry Avery  
+Prison Officer  
+Merck & Co., Inc.  
+jdavid@example.com  
+
+---
+
+From: Norman Krause <tcochran@example.org>  
+To: Larry Avery <jdavid@example.com>  
+Date: October 11, 2023  
+
+Hi Larry,
+
+Thank you for reaching out. I completely agree that with the new product line launch, enhancing our facility's security is paramount. I've reviewed some preliminary data and have a few ideas on how we can improve structural security without impeding daily operations.
+
+Thursday works for me. How about we meet at 2 PM in Conference Room B? I'll bring the initial draft of the structural assessment for us to discuss. If there's anything specific you want me to prepare ahead of time, just let me know.
+
+Looking forward to our meeting.
+
+Best,  
+Norman Krause  
+Engineer, Structural  
+Merck & Co., Inc.  
+tcochran@example.org  

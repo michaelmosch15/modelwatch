@@ -1,0 +1,49 @@
+Subject: Review of Patent Application for New Drug Delivery Mechanism
+
+---
+
+From: Jessica Caldwell <jcaldwell@example.org>  
+To: Mikayla Knight <mknight@example.org>  
+Date: October 10, 2023, 9:15 AM  
+
+Hi Mikayla,
+
+I hope this message finds you well. I’m reaching out regarding the patent application you submitted last month for the innovative drug delivery mechanism developed as part of Project Swift.
+
+I've completed an initial review, and while the design is promising, I need some clarification on a few technical aspects to ensure a thorough examination. Specifically, could you provide more details on the aerodynamics involved in the aerosol dispersion method? The current documentation in sections 4.2 and 5.3 lacks some critical specifications that would help in assessing its uniqueness and potential patentability.
+
+Additionally, if you have any simulation data or test results that could further substantiate the claims, that would be immensely helpful. 
+
+Please let me know a convenient time for us to discuss this. I’m available on Thursday and Friday this week. If you prefer a meeting at our Rahway office, I can reserve a conference room, or we could set up a Zoom call if that suits you better.
+
+Looking forward to your response.
+
+Best,  
+Jessica Caldwell  
+Patent Examiner  
+Merck & Co., Inc.  
+Phone: (732) 555-0198  
+
+---
+
+From: Mikayla Knight <mknight@example.org>  
+To: Jessica Caldwell <jcaldwell@example.org>  
+Date: October 10, 2023, 11:47 AM  
+
+Hi Jessica,
+
+Thank you for your email and for beginning the review process on the patent application. I appreciate your thoroughness.
+
+I completely understand the need for additional details. I can gather the requested information and share some of the simulation models and test results we have compiled. They should provide clarity on the aerodynamics and the overall efficiency of the dispersion mechanism.
+
+How about we schedule a meeting this Friday at 2 PM? I can come to the Rahway office, and we can go through the documents together. Alternatively, a Zoom call works for me if that’s more convenient for you.
+
+I’m eager to address any concerns and move forward with this application. Let me know your preference.
+
+Best regards,  
+Mikayla Knight  
+Aeronautical Engineer  
+Merck & Co., Inc.  
+Phone: (732) 555-0224  
+
+P.S. I’ll be on leave from October 16th to 20th, so I’m keen to finalize any aspects before then.

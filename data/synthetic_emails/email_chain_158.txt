@@ -1,0 +1,43 @@
+---
+
+**From:** Leon Randolph <lydiaglenn@example.org>  
+**Sent:** Monday, October 23, 2023, 9:15 AM  
+**To:** Sue Reed <nolantiffany@example.org>  
+**Subject:** Invoice Discrepancy - Order #45987  
+
+Hi Sue,
+
+I hope this email finds you well. I’m reaching out regarding an issue I’ve encountered with the invoice for Order #45987 from our supplier, BioChem Supplies.
+
+Upon reviewing the invoice, it appears there is a discrepancy in the unit pricing for the raw materials ordered. The invoice lists the unit price for the active pharmaceutical ingredient (API) as $150 per unit, whereas our agreed contract specifies $135 per unit. Could you please verify if there have been any recent amendments to the pricing agreement that I might not be aware of?
+
+Additionally, please let me know if you need me to coordinate directly with BioChem Supplies to rectify this issue, or if it’s something you’d prefer handling directly.
+
+I’m keen to resolve this promptly to ensure our financials are in order before the end of this quarter. Feel free to call me at (555) 0199 442 if you want to discuss this over the phone.
+
+Thanks for your assistance.
+
+Best,  
+Leon
+
+---
+
+**From:** Sue Reed <nolantiffany@example.org>  
+**Sent:** Monday, October 23, 2023, 11:02 AM  
+**To:** Leon Randolph <lydiaglenn@example.org>  
+**Subject:** Re: Invoice Discrepancy - Order #45987  
+
+Hi Leon,
+
+Thank you for bringing this to my attention. I just checked our records, and there haven’t been any formal amendments to the pricing agreement with BioChem Supplies. It’s possible that the discrepancy may be due to a clerical error on their part.
+
+I’ll reach out to our contact at BioChem Supplies to get this sorted out and will keep you updated on the progress. Once I have more information, I’ll coordinate with you to ensure the correction is reflected in our accounting system.
+
+On a different note, I’ll be on leave from October 30 to November 3, so I’d like to wrap up this issue before then. Feel free to reach out to my team or call me directly at (555) 0199 223 if you need any other information.
+
+Thanks again for flagging this.
+
+Best,  
+Sue
+
+---

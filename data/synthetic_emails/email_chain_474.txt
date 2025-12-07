@@ -1,0 +1,48 @@
+**Email 1**
+
+From: Eugene Park <mcculloughchristina@example.org>  
+To: Parker Bentley <igray@example.net>  
+Subject: Coordination on Genetic Analysis for Trial 3B  
+Date: October 18, 2023  
+
+Hi Parker,
+
+I hope this message finds you well. I'm reaching out regarding the genetic analysis component of our ongoing Trial 3B for the new oncology treatment, which I believe you have been assigned to oversee from a regulatory compliance perspective.
+
+As the lead clinical cytogeneticist on this project, I've completed the preliminary analysis phase and am preparing to transition into more detailed genomic profiling. We need to ensure that all protocols align with both internal and external compliance standards, particularly considering the sensitive nature of patient genetic data.
+
+Could we schedule a meeting this week to go over the compliance checklist and address any potential concerns? I’m available on Thursday after 2 PM or Friday morning. Let me know what works best for you.
+
+Additionally, I've attached the initial report for your review. Please feel free to call me directly at (555) 012-3456 if you have any immediate questions.
+
+Looking forward to your feedback.
+
+Best regards,
+
+Eugene Park  
+Clinical Cytogeneticist  
+Merck Research Labs  
+
+---
+
+**Email 2**
+
+From: Parker Bentley <igray@example.net>  
+To: Eugene Park <mcculloughchristina@example.org>  
+Subject: Re: Coordination on Genetic Analysis for Trial 3B  
+Date: October 18, 2023  
+
+Hi Eugene,
+
+Thank you for reaching out and for sending over the initial report. I’ve had a preliminary look, and everything seems to be in good order. Your thoroughness is much appreciated.
+
+I’m available on Thursday at 3 PM, which should give us ample time to cover the compliance aspects of the genetic data usage for Trial 3B. Let’s meet in Conference Room B on the 5th floor. I’ll bring along the updated regulatory checklist for our discussion.
+
+Also, I wanted to mention that I’ll be on leave next week for a training program, so if we need to follow up on anything, it might be best to do so before then.
+
+Thanks again for your proactive approach. I'll see you on Thursday.
+
+Best,  
+Parker Bentley  
+Regulatory Compliance Officer  
+Merck Research Labs  

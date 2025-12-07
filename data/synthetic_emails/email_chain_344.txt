@@ -1,0 +1,41 @@
+Subject: Review Needed: Surgical Instruments Brochure
+
+---
+
+From: Neil Scott <bbowman@example.org>  
+To: Victoria Branch <aglenn@example.org>  
+Date: October 10, 2023  
+
+Hi Victoria,
+
+I hope this message finds you well. I'm reaching out regarding the new surgical instruments brochure that we are planning to launch next month. Dr. Yu and I have gone through the technical specifications, and everything seems aligned with our latest innovations.
+
+Could you please review the draft for any inconsistencies or areas that might need more clarity from a copy perspective? We want to ensure that the language is both accessible and precise, especially since this will also be used in presentations at the upcoming MedTech Conference in Boston.
+
+I understand you’re heading on leave next week, so if it’s possible to get your feedback by this Friday, October 13th, that would be ideal. Let me know if you require any further details from my end.
+
+Best,  
+Neil Scott  
+Surgeon  
+Merck Pharmaceuticals  
+Office: 555-0123  
+
+---
+
+From: Victoria Branch <aglenn@example.org>  
+To: Neil Scott <bbowman@example.org>  
+Date: October 10, 2023  
+
+Hi Neil,
+
+Thanks for sending this over. I’ll prioritize the review and aim to get my comments back to you by Thursday. I agree that clarity will be crucial, especially since the audience will include a range of expertise levels at the MedTech Conference.
+
+Additionally, if there’s anything specific you’d like me to focus on, please feel free to highlight those sections. I’ll be in the office until the 17th, so if there are any last-minute changes, I’ll be available to assist.
+
+Looking forward to collaborating on this!
+
+Best regards,  
+Victoria Branch  
+Copywriter  
+Merck Pharmaceuticals  
+Office: 555-0345  
