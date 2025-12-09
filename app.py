@@ -43,7 +43,7 @@ def load_model_logic(model_path):
     model.eval()
     return True
 
-def redact_text_logic(text, threshold=0.5):
+def redact_text_logic(text, threshold=0.9):
     if not text:
         return ""
         
@@ -61,13 +61,41 @@ def redact_text_logic(text, threshold=0.5):
     
     output_tokens = []
     for token_id, prob in zip(input_ids, probs):
-        if prob > threshold:
+        token_str = tokenizer.decode([token_id])
+        # Only redact if probability is high AND it's not a common stopword/punctuation
+        # This is a heuristic to reduce false positives on common words
+        if prob > threshold and len(token_str.strip()) > 1:
             output_tokens.append("[REDACTED]")
         else:
-            output_tokens.append(tokenizer.decode([token_id]))
+            output_tokens.append(token_str)
     
     redacted_text = "".join(output_tokens)
     return redacted_text
+
+def generate_response_logic(text, max_new_tokens=150):
+    if not text:
+        return ""
+    
+    inputs = tokenizer(text, return_tensors="pt", truncation=True, max_length=1024).to(device)
+    
+    with torch.no_grad():
+        output_sequences = model.generate(
+            input_ids=inputs.input_ids,
+            attention_mask=inputs.attention_mask,
+            max_new_tokens=max_new_tokens,
+            pad_token_id=tokenizer.eos_token_id,
+            do_sample=True,
+            top_k=50,
+            top_p=0.95,
+            temperature=0.7,
+            repetition_penalty=1.2,
+            no_repeat_ngram_size=3
+        )
+    
+    # Decode only the newly generated tokens, excluding the input prompt
+    new_tokens = output_sequences[0][inputs.input_ids.shape[1]:]
+    generated_text = tokenizer.decode(new_tokens, skip_special_tokens=True)
+    return generated_text
 
 # Initialize model on startup
 model_path = os.path.join(current_dir, "models", "pii_filter_model.pt")
@@ -78,13 +106,16 @@ if not load_model_logic(model_path):
 def index():
     redacted_text = ""
     input_text = ""
+    gpt_response = ""
     
     if request.method == 'POST':
         input_text = request.form.get('input_text', '')
         if input_text:
             redacted_text = redact_text_logic(input_text)
+            # Generate response based on the redacted text
+            gpt_response = generate_response_logic(redacted_text)
     
-    return render_template('index.html', input_text=input_text, redacted_text=redacted_text)
+    return render_template('index.html', input_text=input_text, redacted_text=redacted_text, gpt_response=gpt_response)
 
 if __name__ == '__main__':
     app.run(debug=True, port=5000)

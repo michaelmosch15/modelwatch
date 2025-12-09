@@ -107,6 +107,13 @@
             <div class="output-box">{{ redacted_text }}</div>
         </div>
         {% endif %}
+
+        {% if gpt_response %}
+        <div class="output-section">
+            <label>GPT-2 Model Response (Ingesting Redacted Text):</label>
+            <div class="output-box">{{ gpt_response }}</div>
+        </div>
+        {% endif %}
     </div>
 </body>
 </html>
