@@ -6,3 +6,4 @@ tqdm>=4.66
 openai>=1.0.0
 python-dotenv>=1.0.0
 phonenumbers>=9.0.20
+flask>=3.0.0

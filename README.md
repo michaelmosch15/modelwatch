@@ -45,6 +45,18 @@ python redact.py --input_file data/synthetic_emails/email_chain_1.txt --output o
 -   `--output`, `-o`: Path to save the redacted output.
 -   `--threshold`: Probability threshold for redaction (default: 0.5).
 
+### Web Application
+
+To run the interactive web interface:
+
+1.  **Run the application**:
+    ```bash
+    python app.py
+    ```
+
+2.  **Access the interface**:
+    Open your web browser and navigate to: [http://127.0.0.1:5000](http://127.0.0.1:5000)
+
 ### Training
 
 To retrain the PII filter on new data:
