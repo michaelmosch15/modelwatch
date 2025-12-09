@@ -98,16 +98,11 @@ def train():
     criterion = nn.BCEWithLogitsLoss()
 
     model.train()
-    start_time = time.time()
     for epoch in range(EPOCHS):
         total_loss = 0
         progress_bar = tqdm(dataloader, desc=f"Epoch {epoch+1}/{EPOCHS}")
         
         for batch in progress_bar:
-            if time.time() - start_time > 60:
-                print("\nTraining time limit of 1 minute reached. Stopping.")
-                break
-
             input_ids = batch["input_ids"].to(device)
             attention_mask = batch["attention_mask"].to(device)
             labels = batch["labels"].to(device).unsqueeze(-1)
@@ -131,9 +126,6 @@ def train():
             progress_bar.set_postfix({"loss": loss.item()})
 
         print(f"Epoch {epoch+1} Average Loss: {total_loss / len(dataloader)}")
-
-        if time.time() - start_time > 60:
-            break
 
     print(f"Saving model to {MODEL_SAVE_PATH}")
     torch.save(model.state_dict(), MODEL_SAVE_PATH)
